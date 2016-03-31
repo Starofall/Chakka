@@ -1,0 +1,176 @@
+html {
+    height: 100%;
+    background-color: #454545;
+    font-family: FreeMono, monospace;
+    color: #aaa;
+    font-size: 12px;
+    line-height: 14px;
+}
+.body {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+chat-application {
+    border: 1px solid black;
+    width: auto;
+    height: 100%;
+    display:block;
+}
+
+chat-header {
+    display:block;
+    width: auto;
+    top: 20px;
+    font-size: 16px;
+    background-color: #7c0007;
+    color: white;
+    font-family: FreeMono, monospace;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+
+chat-area {
+    overflow: auto;
+    height:auto;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    position: relative;
+    font-family: FreeMono, monospace;
+    color: #404040;
+    background-color: #000;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;  /* for vertical scrollbars */
+    height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: rgb(125, 0, 7);
+}
+
+chat-area a {
+    color: #b60008;
+}
+
+chat-area a:hover {
+    color: #d30009;
+}
+
+chat-message {
+    display: block;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+
+chat-user {
+    font-weight: bold;
+}
+
+chat-user::after {
+    content: ":";
+}
+
+chat-text{
+    color:#FFF;
+}
+
+chat-inputarea {
+    width: auto;
+    display: flex;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    color: #aaa;
+    background-color: #14151c;
+}
+.chatTextInput {
+    width: 100%;
+    color: white;
+    padding:4px;
+    margin:4px;
+    border: 0px solid black;
+    background: rgb(123, 0, 7);
+}
+/*Removes the blue glow on chrome when selected*/
+.chatTextInput:focus {
+    outline: none;
+}
+
+.sendTextButton{
+    background-color: #7b0007;
+    margin:4px;
+    border:1px solid #7b0007;
+    display:block;
+    cursor:pointer;
+    color:lightgray;
+}
+.sendTextButton:hover {
+    background-color: #3c0001;
+}
+.sendTextButton:active {
+    position:relative;
+    top:1px;
+}
+
+chat-container {
+    height:500px;
+}
+chat-channellist{
+    display: flex;
+}
+chat-channelselector{
+    border: 1px solid #000001;
+    background-color: gray;
+    color:#FFFFFF;
+    padding: 5px;
+    cursor: pointer;
+}
+chat-channelselector.active {
+    background-color: lightgray;
+    color:black;
+}
+chat-channelselector.notify {
+    background-color: #7b0007;
+    color:white;
+    animation: blinker 0.6s infinite alternate;
+}
+@keyframes blinker {
+    from { opacity: 1; }
+    to { opacity: 0.6; }
+}
+
+chat-userlist {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: list-item;
+    background-color: #14151c;
+    width: 150px;
+    margin-left: 5px;
+}
+
+chat-channeluser {
+    display: block;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #464646;
+}
