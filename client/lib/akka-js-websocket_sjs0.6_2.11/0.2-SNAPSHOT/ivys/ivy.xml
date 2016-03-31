@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="akka.js" module="akka-js-websocket_sjs0.6_2.11" revision="0.2-SNAPSHOT" status="integration" publication="20151210021224">
+		<description>
+		akka-js-websocket
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		<conf name="docs" visibility="public" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		
+		
+	</configurations>
+	<publications>
+		<artifact name="akka-js-websocket_sjs0.6_2.11" type="pom" ext="pom" conf="pom"/>
+		<artifact name="akka-js-websocket_sjs0.6_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="akka-js-websocket_sjs0.6_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		<artifact name="akka-js-websocket_sjs0.6_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.6" conf="compile->default(compile)"/>
+		<dependency org="akka.js" name="akka-js-actor_sjs0.6_2.11" rev="0.2-SNAPSHOT" conf="compile->default(compile)"/>
+		
+		
+		
+		<dependency org="org.scala-js" name="scalajs-library_2.11" rev="0.6.2" conf="compile->default(compile)"/>
+		<dependency org="org.scala-js" name="scalajs-dom_sjs0.6_2.11" rev="0.8.0" conf="compile->default(compile)"/>
+		<dependency org="be.doeraene" name="scalajs-pickling_sjs0.6_2.11" rev="0.4.0" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>
